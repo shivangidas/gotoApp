@@ -1,0 +1,303 @@
+/*
+*Author : Shivangi Das
+*Date : 07/12/2016
+*/
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+}
+body {
+  margin: 0;
+  /* Margin bottom by footer height */
+  margin-bottom: 1.25em;
+  /* 20/16 = 1.25*/
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  padding: 0.625em 0.1em;
+  /* 10/16 = 0.625*/
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5em 0;
+  /* Set the fixed height of the footer;
+ make sure it sticks to the bottom of the page*/
+  height: 1.25em;
+}
+header {
+  background-image: url(images/user-interface-2.png), url(images/aurora.jpg);
+  background-size: 16em, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center bottom, center top;
+  padding-bottom: 12em;
+}
+nav {
+  margin-bottom: 1.25em;
+  padding: 0.625em;
+}
+a {
+  text-decoration: none; 
+}
+ header a{
+  color: white;
+}
+header h2, header h4 {
+text-shadow:  0 0 8px #b4c7a8;
+}
+text-shadow:  2px 2px 8px #b4c7a8;
+footer a{
+  color: rgba(0, 0, 0, 0.55);
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.contento {
+  margin: 0 5%;
+}
+@media screen and (min-width: 600px) {
+  .contento {
+    margin: 0 10%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .contento {
+    margin: 0 12%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contento {
+    margin: 0 15%;
+  }
+}
+
+/****************grids of 12********************/
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+[class*="col-"] {
+  float: left;
+  padding: 0.3em 0;
+}
+
+/* For mobile phones: */
+
+[class*="col-"] {
+  width: 100%;
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-m-1 {
+    width: 8.33%;
+  }
+  .col-m-2 {
+    width: 16.66%;
+  }
+  .col-m-3 {
+    width: 25%;
+  }
+  .col-m-4 {
+    width: 33.33%;
+  }
+  .col-m-5 {
+    width: 41.66%;
+  }
+  .col-m-6 {
+    width: 50%;
+  }
+  .col-m-7 {
+    width: 58.33%;
+  }
+  .col-m-8 {
+    width: 66.66%;
+  }
+  .col-m-9 {
+    width: 75%;
+  }
+  .col-m-10 {
+    width: 83.33%;
+  }
+  .col-m-11 {
+    width: 91.66%;
+  }
+  .col-m-12 {
+    width: 100%;
+  }
+
+}
+@media only screen and (min-width: 800px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 400px) {
+  /* For desktop: */
+  .col-i-2 {
+    width: 20%;
+  }
+  h3{
+  overflow: hidden;
+  font-size: 1.1em;
+  }
+  h3:before, h3:after {
+    content: "";
+    display: inline-block;
+    width: 50%;
+    margin: 0 .5em 0 -55%;
+    vertical-align: middle;
+    border-bottom: 1px solid;
+  }
+  h3:after {
+    margin: 0 -55% 0 .5em;
+  }
+}
+
+
+/*******************************************************************/
+
+.btn-green {
+  position: relative;
+  display: inline-block;
+  border: none;
+  padding: 0.625em;
+  border-radius: 0.625em;
+  background-color: #67c629;
+  box-shadow: 0 0 5px rgba(154, 127, 25, 0.84);
+}
+.btn-green:focus {
+  outline: none;
+}
+.btn-green .btn-menu {
+  visibility: hidden;
+  width: 14em;
+  background-color: white;
+  color: #4d4d4d;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(39, 84, 100, 0.84);
+  padding: 0.5em 0.5em;
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 50%;
+  margin-left: -7.25em;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.btn-green .btn-menu::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+.btn-green:hover .btn-menu {
+  visibility: visible;
+  opacity: 1;
+}
+.btn-menu ul li:hover {
+  background-color: rgba(113, 103, 103, 0.26);
+  border-radius: 0.1em;
+}
+.btn-menu div, .btn-menu ul li {
+  text-align: left;
+}
+
+/**********************************************************************/
+
+.mainContent {
+  box-shadow: 0 0 0.3125em rgba(68, 66, 58, 0.84);
+}
+.bottomRow {
+  margin-bottom: 4em;
+}
+i {
+  color: grey;
+}
+.mainContent i {
+  color: #64b4b7;
+}
+.mainContent article i{
+      color: rgba(128, 128, 128, 0.42);
+    border-radius: 2em;
+} 
+/* for icons on phone*/
+@media screen and (max-width: 600px) {
+  .fa-2x {
+    font-size: 1.5em;
+  }
+}
+.customer{
+  margin-top: 1em;
+}
+.customer img{
+    height: 3em;
+    width: 3em;
+    max-width: 100%;
+    border-radius: 3em;
+}
+/**********************/
+@media only screen and (min-width: 600px) {
+    html {
+    font-size: 1em;
+  }
+ 
+}
+@media only screen and (min-width: 600px) {
+    html {
+    font-size: 1.1em;
+  }
+    
+}
+
