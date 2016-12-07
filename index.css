@@ -288,8 +288,12 @@ h4{
 i {
   color: grey;
 }
-.mainContent i {
+.mainContent .col-4 i {
   color: #64b4b7;
+  transition:transform .2s ease-out;
+}
+.mainContent .col-4 i:hover{
+  transform: scale(1.2);
 }
 .mainContent article i{
     color: rgba(128, 128, 128, 0.42);
