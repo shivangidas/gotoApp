@@ -24,6 +24,9 @@ li {
   padding: 0.625em 0.1em;
   /* 10/16 = 0.625*/
 }
+p{
+  padding: 0 0.625em;
+}
 footer {
   position: absolute;
   bottom: 0;
@@ -47,16 +50,18 @@ nav {
 a {
   text-decoration: none; 
 }
- header a{
+ header h1, header h4, header a{
   color: white;
 }
-header h2, header h4 {
+header h1, header h4 {
 text-shadow:  0 0 8px #b4c7a8;
 }
-text-shadow:  2px 2px 8px #b4c7a8;
-footer a{
+
+footer, footer a{
   color: rgba(0, 0, 0, 0.55);
+  font-size: small;
 }
+
 .left {
   float: left;
 }
@@ -258,9 +263,13 @@ footer a{
 
 .mainContent {
   box-shadow: 0 0 0.3125em rgba(68, 66, 58, 0.84);
+  color: #515456;
+  padding-top: 2em;
 }
 .bottomRow {
+  padding-top: 2em;
   margin-bottom: 4em;
+  color: #515456;
 }
 i {
   color: grey;
@@ -269,13 +278,17 @@ i {
   color: #64b4b7;
 }
 .mainContent article i{
-      color: rgba(128, 128, 128, 0.42);
+    color: rgba(128, 128, 128, 0.42);
     border-radius: 2em;
 } 
 /* for icons on phone*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .fa-2x {
     font-size: 1.5em;
+  }
+  footer div{
+    text-align: center;
+    float: none !important;
   }
 }
 .customer{
@@ -286,6 +299,9 @@ i {
     width: 3em;
     max-width: 100%;
     border-radius: 3em;
+}
+.small{
+  font-size: small;
 }
 /**********************/
 @media only screen and (min-width: 600px) {
