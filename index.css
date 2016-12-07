@@ -52,10 +52,10 @@ a {
   text-decoration: none; 
 }
  header h1, header h4, header a{
-  color: white;
+  color: rgba(255, 255, 255, 0.81);
 }
 header h1, header h4 {
-text-shadow:  0 0 8px #b4c7a8;
+text-shadow: 0 0 8px rgba(0, 0, 0, 0.91);
 }
 
 footer, footer a{
@@ -184,6 +184,9 @@ footer, footer a{
     width: 100%;
   }
 }
+h4{
+  font-size:1.2em;
+}
 @media only screen and (min-width: 400px) {
   /* For desktop: */
   .col-i-2 {
@@ -275,6 +278,7 @@ footer, footer a{
   box-shadow: 0 0 0.3125em rgba(68, 66, 58, 0.84);
   color: #515456;
   padding-top: 2em;
+  background-color: rgba(169, 169, 169, 0.08);
 }
 .bottomRow {
   padding: 2em 0;
@@ -284,8 +288,12 @@ footer, footer a{
 i {
   color: grey;
 }
-.mainContent i {
+.mainContent .col-4 i {
   color: #64b4b7;
+  transition:transform .2s ease-out;
+}
+.mainContent .col-4 i:hover{
+  transform: scale(1.2);
 }
 .mainContent article i{
     color: rgba(128, 128, 128, 0.42);
