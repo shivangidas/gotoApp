@@ -1,3 +1,3 @@
 # gotoApp
 Test 2
-http://myexperiments.in/gotoApp/index.html
+ http://myexperiments.in/goto/index.html
