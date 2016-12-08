@@ -162,19 +162,27 @@ i {
   background-color: rgba(169, 169, 169, 0.08);
 }
 .mainContent .col-4 i {
-  color: #64b4b7;
+  background-color:#acc8c9;
+  color:white;
+  border-radius:4em;
+  -webkit-border-radius:4em;
+  -moz-border-radius:4em;
   transition: transform .2s ease-out;
   transition: -ms-transform .2s ease-out;
   -webkit-transition: -webkit-transform .2s ease-out;
   -moz-transition: -moz-transform .2s ease-out;
   -o-transition: -o-transform .2s ease-out;
 }
+.mainContent .col-4 .fa-border{
+  border:none;
+}
 .mainContent .col-4 i:hover {
-  transform: scale(1.3);
-  -webkit-transform: scale(1.3);
-  -moz-transform: scale(1.3);
-  -o-transform: scale(1.3);
-  -ms-transform: scale(1.3);
+  background-color:#8cb3b4;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
 }
 .mainContent article i {
   color: rgba(128, 128, 128, 0.42);
