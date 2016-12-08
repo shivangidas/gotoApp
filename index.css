@@ -184,9 +184,6 @@ footer, footer a{
     width: 100%;
   }
 }
-h4{
-  font-size:1.2em;
-}
 @media only screen and (min-width: 400px) {
   /* For desktop: */
   .col-i-2 {
@@ -194,7 +191,7 @@ h4{
   }
   h3{
   overflow: hidden;
-  font-size: 1.1em;
+  font-size: 1em;
   }
   h3:before, h3:after {
     content: "";
