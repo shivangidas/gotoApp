@@ -121,11 +121,13 @@ button {
   top: 120%;
   left: 50%;
   margin-left: -7.25em;
+  visibility: hidden;
+
   opacity: 0;
-  transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+  -webkit-transition: visibility 0s 0.5s, opacity 0.5s linear;
+  -moz-transition: visibility 0s 0.5s, opacity 0.5s linear;
+  -o-transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
 .btn-green .btn-menu::after {
   content: "";
@@ -138,11 +140,12 @@ button {
   border-color: transparent transparent white transparent;
 }
 .btn-green:hover .btn-menu {
+  visibility: visible;
   opacity: 1;
-  transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s linear;
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
 }
 .btn-menu ul li:hover {
   background-color: rgba(113, 103, 103, 0.26);
